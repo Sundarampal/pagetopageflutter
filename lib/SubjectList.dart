@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pagetopageflutter/subjectarray.dart';
 
 class Subjectlist extends StatefulWidget {
   const Subjectlist({super.key});
@@ -13,15 +14,18 @@ class _SubjectlistState extends State<Subjectlist> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(title: Text('Subject List'), centerTitle: true),
-        body: Center(
-          child: ElevatedButton(
-            onPressed: () {
-              print("Subject List");
-            },
-            child: Text("Subject List"),
-          ),
-        ),
+        body: Center(child: Column(children: Subjectarray.widgets)),
       ),
     );
   }
 }
+
+// Center(
+// child: ElevatedButton(
+// onPressed: () {
+// print("Subject List");
+// Navigator.pushNamed(context,'/three');
+// },
+// child: Text("Subject List"),
+// ),
+// ),

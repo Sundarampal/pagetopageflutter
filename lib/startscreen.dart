@@ -15,6 +15,7 @@ class StartScreen extends StatelessWidget {
               print("Go to Subject list");
               Navigator.pushNamed(context, '/second');
             },
+
             child: Text("Go to subjects list"),
           ),
         ),
