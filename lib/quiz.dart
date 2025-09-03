@@ -1,28 +1,7 @@
-import 'package:flutter/material.dart';
-
-class Quiz extends StatefulWidget {
-  const Quiz({super.key});
-
-  @override
-  State<Quiz> createState() => _quizState();
-}
-
-class _quizState extends State<Quiz> {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text('Quiz'), centerTitle: true),
-        body: Center(
-          child: ElevatedButton(
-            onPressed: () {
-              Navigator.pushNamed(context,'/fifth');
-
-            },
-            child: Text("Quiz"),
-          ),
-        ),
-      ),
-    );
-  }
+class Quiz {
+  int quizno = -1;
+  String quizname = "";
+  String url1 = "";
+  String url2 = "";
+  Quiz(this.quizno,this.quizname, this.url1, this.url2);
 }

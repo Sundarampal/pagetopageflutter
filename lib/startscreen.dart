@@ -1,5 +1,6 @@
 // TODO Implement this library.
 import 'package:flutter/material.dart';
+import 'package:pagetopageflutter/subjectarray.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen({super.key});
@@ -13,6 +14,7 @@ class StartScreen extends StatelessWidget {
           child: ElevatedButton(
             onPressed: () {
               print("Go to Subject list");
+              Subjectarray.context=context;
               Navigator.pushNamed(context, '/second');
             },
 

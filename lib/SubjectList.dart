@@ -15,12 +15,16 @@ class _SubjectlistState extends State<Subjectlist> {
       home: Scaffold(
         appBar: AppBar(title: Text('Subject List'), centerTitle: true),
         body: Center(child: Column(children: Subjectarray.widgets)),
-      ),
+
+
+
+        ),
+      
     );
   }
 }
 
-// Center(
+ //Center(
 // child: ElevatedButton(
 // onPressed: () {
 // print("Subject List");

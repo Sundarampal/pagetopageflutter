@@ -15,7 +15,7 @@ void main() async {
         '/': (context) => StartScreen(),
         '/second': (context) => Subjectlist(),
         '/three': (context) => Quizlist(),
-        '/fourth':(context) => Quiz(),
+        '/fourth':(context) => Quizlist(),
         '/fifth':(context) => Result(),
       },
     ),

@@ -1,24 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:pagetopageflutter/quizarray.dart';
+
 class Quizlist extends StatefulWidget {
   const Quizlist({super.key});
 
   @override
-  State<Quizlist> createState() => _quizlistState();
+  State<Quizlist> createState() => _QuizlistState();
 }
 
-class _quizlistState extends State<Quizlist> {
+class _QuizlistState extends State<Quizlist> {
+
+
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text("Quizlist"),centerTitle: true),
-        body: Center(
-          child: ElevatedButton(onPressed: (){
-            Navigator.pushNamed(context,'/fourth');
+    QuizArray.context = context;
 
-          },
-              child: Text("quizlist")),
+    return MaterialApp(
+      home:  Scaffold(
+        appBar: AppBar(
+          title: const Text('Quiz List'),
+          centerTitle: true,
         ),
+        body:   Center( child: Column(
+          children: QuizArray.widgets,
+        ),)
       ),
     );
   }
