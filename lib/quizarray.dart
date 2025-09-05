@@ -3,7 +3,6 @@ import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as https;
 import 'package:pagetopageflutter/quiz.dart';
-
 class QuizArray {
   static BuildContext? context;
   static List<Quiz> quizzes = [];
@@ -13,7 +12,6 @@ class QuizArray {
   static String? url1, url2;
   static Future<String> downloadQuizzes() async {
     Uri url = Uri.https(url1!, url2!);
-
     try {
       final response = await https.get(url);
       final a = convert.jsonDecode(response.body);
@@ -27,13 +25,11 @@ class QuizArray {
       }
       print("sundram");
       print("Quiz Array");
-
       print("hello");
       print(widgets);
       // print("Quiz: $quizname");
       //print("Url1: $quizUrl1");
       //print("Url2: $quizUrl2");
-
       return "ok";
     } catch (ex) {
       print("Error: $ex");
